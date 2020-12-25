@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.javabrains.MovieCatalogueService.model.Ratings&apos; to &apos;Rating&apos;&#x0D;&#x0A;- Original project: &apos;MovieCatalogueService&apos;&#x0D;&#x0A;- Original element: &apos;com.javabrains.MovieCatalogueService.model.Ratings&apos;&#x0D;&#x0A;- Renamed element: &apos;com.javabrains.MovieCatalogueService.model.Rating&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ratings&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.javabrains.MovieCatalogueService.model{Ratings.java[Ratings" matchStrategy="1" name="Rating" qualified="false" references="true" similarDeclarations="false" stamp="1608491184854" textual="false" version="1.0"/>
+</session>
