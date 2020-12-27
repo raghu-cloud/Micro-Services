@@ -2,39 +2,43 @@ package com.javabrains.MovieInfoService.model;
 
 public class Movie {
 	
-	public int movieId;
-	public String movieName;
-	public String movieDesc;
+	public String id;
+	public String original_title;
+	public String overview;
+
+	public Movie(){
+
+	}
 	
-	public Movie(int movieId, String movieName, String movieDesc) {
+	public Movie(String id, String original_title, String overview) {
 		super();
-		this.movieId = movieId;
-		this.movieName = movieName;
-		this.movieDesc=movieDesc;
+		this.id = id;
+		this.original_title = original_title;
+		this.overview = overview;
 	}
 
-	public String getMovieDesc() {
-		return movieDesc;
+	public String getOverview() {
+		return overview;
 	}
 
-	public void setMovieDesc(String movieDesc) {
-		this.movieDesc = movieDesc;
+	public void setOverview(String overview) {
+		this.overview = overview;
 	}
 
-	public int getMovieId() {
-		return movieId;
+	public String getId() {
+		return id;
 	}
 
-	public void setMovieId(int movieId) {
-		this.movieId = movieId;
+	public void setId(String id) {
+		this.id = id;
 	}
 
-	public String getMovieName() {
-		return movieName;
+	public String getOriginal_title() {
+		return original_title;
 	}
 
-	public void setMovieName(String movieName) {
-		this.movieName = movieName;
+	public void setOriginal_title(String original_title) {
+		this.original_title = original_title;
 	}
 	
 	
