@@ -24,8 +24,8 @@ public class RatingsService {
         RatingsObject ratingsObject = new RatingsObject();
 
         ratingsObject.setRatingsObject(Arrays.asList(
-                new Rating("500","9"),
-                new Rating("501","8")
+                new Rating("500","4"),
+                new Rating("501","5")
         ));
         return ratingsObject;
     }

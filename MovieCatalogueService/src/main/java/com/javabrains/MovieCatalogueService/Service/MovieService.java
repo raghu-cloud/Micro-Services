@@ -30,6 +30,6 @@ public class MovieService {
     }
 
     public CatalogueItem fallBackGetMovieCatalogueItem(Rating rating) {
-        return  new CatalogueItem("null name","null description",rating.getRating());
+        return  new CatalogueItem("NULLLL","NULLLL",rating.getRating());
     }
 }
