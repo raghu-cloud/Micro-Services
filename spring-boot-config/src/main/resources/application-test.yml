@@ -1,0 +1,11 @@
+app:
+  name: Test-App
+  description: Welcome to Test app
+
+
+db:
+  connection: test-connection-String
+  port: 1200
+  host: 127.0.0
+
+management.endpoints.web.exposure.include: "*"

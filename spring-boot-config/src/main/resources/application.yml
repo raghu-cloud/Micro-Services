@@ -1,0 +1,17 @@
+greeting:
+ message: Hello there how are you.
+numbers:
+ list: one,two,three
+app:
+ name: Developement App
+ description: Welcome to ${app.name}
+
+
+db:
+ connection: Dev-connection-String
+ port: 1200
+ host: 127.0.0
+
+management.endpoints.web.exposure.include: "*"
+
+
