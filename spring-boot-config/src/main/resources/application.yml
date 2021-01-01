@@ -8,10 +8,14 @@ app:
 
 
 db:
- connection: Dev-connection-String
+ connection: Dev-connection-String from application.
  port: 1200
  host: 127.0.0
 
+server.port: 8084
+
 management.endpoints.web.exposure.include: "*"
 
-
+spring:
+ application:
+  name: spring-boot-config
