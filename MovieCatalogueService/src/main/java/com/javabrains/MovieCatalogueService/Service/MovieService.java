@@ -23,7 +23,7 @@ public class MovieService {
     @Autowired
     private WebClient webclient;
 
-    //@HystrixCommand(fallbackMethod = "fallBackGetMovies")
+    @HystrixCommand(fallbackMethod = "fallBackGetMovies")
     public List<MovieDTO> getMovies(String userId) {
         ParameterizedTypeReference<List<MovieDTO>> typeRef
                 = new ParameterizedTypeReference<List<MovieDTO>>() {
@@ -36,10 +36,10 @@ public class MovieService {
         return response.getBody();
     }
 
-   /* public List<MovieDTO> fallBackGetMovies(String  userId) {
+    public List<MovieDTO> fallBackGetMovies(String  userId) {
         List<MovieDTO> movies = Arrays.asList(
                 new MovieDTO(0L, "Defult Movie", "Defult Movie", "0")
         );
         return movies;
-    }*/
+    }
 }
