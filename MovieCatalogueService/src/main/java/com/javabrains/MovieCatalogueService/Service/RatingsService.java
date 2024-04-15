@@ -1,13 +1,10 @@
 package com.javabrains.MovieCatalogueService.Service;
 
-import com.javabrains.MovieCatalogueService.model.Rating;
-import com.javabrains.MovieCatalogueService.model.RatingsObject;
+import com.javabrains.MovieCatalogueService.dtos.RatingDTO;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.Arrays;
 
 @Service
 public class RatingsService {
@@ -15,18 +12,13 @@ public class RatingsService {
     @Autowired
     private RestTemplate restTemplate;
 
-    @HystrixCommand(fallbackMethod = "fallBackGetUserRatings")
-    public RatingsObject getUserRatings(String userId) {
-        return restTemplate.getForObject("http://RATINGDATASERVICE/ratingsData/user/" + userId, RatingsObject.class);
+    @HystrixCommand(fallbackMethod = "fallBackGetUserRating")
+    public RatingDTO getUserRating(String movieId) {
+        RatingDTO ratingDTO =  restTemplate.getForObject("http://RATINGDATASERVICE/ratingsData/getRating/" + movieId, RatingDTO.class);
+        return ratingDTO;
     }
 
-    public RatingsObject fallBackGetUserRatings(String userId) {
-        RatingsObject ratingsObject = new RatingsObject();
-
-        ratingsObject.setRatingsObject(Arrays.asList(
-                new Rating("500","4"),
-                new Rating("501","5")
-        ));
-        return ratingsObject;
+    public RatingDTO fallBackGetUserRating(String userId) {
+        return new RatingDTO(0L,"0",0.0);
     }
 }

@@ -23,8 +23,8 @@ public class MovieCatalogueServiceApplication {
 	}
 	
 	@Bean
-	public WebClient.Builder webClientBuilder(){
-		return WebClient.builder();
+	public WebClient webCleint(){
+		return WebClient.create();
 	}
 
 	public static void main(String[] args) {
